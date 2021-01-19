@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     @objc func moveToCalculatorViewController(_ sender: UIGestureRecognizer) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "calculatorViewController")
-        self.navigationController?.pushViewController(vc, animated: true)
+        present(vc, animated: true)
     }
 }
 

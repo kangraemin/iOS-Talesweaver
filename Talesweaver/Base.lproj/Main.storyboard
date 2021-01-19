@@ -1,24 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Talesweaver" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WNG-uS-zsH">
+                                <rect key="frame" x="110" y="74" width="194" height="217"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wr2-1y-8kM">
+                                        <rect key="frame" x="58" y="149" width="78" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="괴산기">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gold-ingots.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bdw-Fi-f43">
+                                        <rect key="frame" x="0.0" y="11" width="194" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="0Qo-Rl-hjh"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Bdw-Fi-f43" firstAttribute="centerX" secondItem="WNG-uS-zsH" secondAttribute="centerX" id="PqK-F1-1q8"/>
+                                    <constraint firstItem="wr2-1y-8kM" firstAttribute="top" secondItem="Bdw-Fi-f43" secondAttribute="bottom" constant="8" id="Tmb-rF-th6"/>
+                                    <constraint firstItem="Bdw-Fi-f43" firstAttribute="top" secondItem="WNG-uS-zsH" secondAttribute="top" constant="11" id="gxA-vV-1yD"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bdw-Fi-f43" secondAttribute="trailing" id="hbL-C3-UXj"/>
+                                    <constraint firstItem="Bdw-Fi-f43" firstAttribute="leading" secondItem="WNG-uS-zsH" secondAttribute="leading" id="yqm-3O-zod"/>
+                                    <constraint firstItem="wr2-1y-8kM" firstAttribute="centerX" secondItem="WNG-uS-zsH" secondAttribute="centerX" id="zHR-CI-VT0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WNG-uS-zsH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="4Fh-Yq-3zJ"/>
+                            <constraint firstItem="WNG-uS-zsH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="L1K-gW-qV6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WNG-uS-zsH" secondAttribute="trailing" constant="110" id="sLK-zX-gPf"/>
+                            <constraint firstItem="WNG-uS-zsH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yYY-Z8-dV8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WNG-uS-zsH" secondAttribute="bottom" constant="571" id="zlU-Rv-s6i"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="calculatorView" destination="WNG-uS-zsH" id="Lf2-0N-Rrt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="40.579710144927539" y="-247.09821428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Do5-el-Unh">
+            <objects>
+                <viewController storyboardIdentifier="calculatorViewController" id="bgk-DJ-awV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Jv-7V-N9L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSZ-gV-7za">
+                                <rect key="frame" x="98" y="111" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nad-xI-vpd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7vu-Vc-1Sj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pqo-nL-W3U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="816" y="-247"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gold-ingots.png" width="384" height="384"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

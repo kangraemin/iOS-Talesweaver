@@ -83,9 +83,6 @@
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="arrow.up.arrow.down" catalog="system"/>
-                                <connections>
-                                    <action selector="conversionButtonClicked:" destination="h0T-uz-lms" eventType="touchUpInside" id="UQj-bX-7Vb"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fa5-yI-KFX">
                                 <rect key="frame" x="344" y="258" width="40" height="28"/>

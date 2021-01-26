@@ -20,8 +20,7 @@ class CalculatorController: UIViewController, UITextFieldDelegate {
     // Constants
     private let pivotGoldSeed: Int64 = 44000000
     private let EMPTY_RESULT: Int64 = 0
-    private let INT64_OVERFLOW_RESULT: Int64 = -1
-    private let INVALID_VALUE: Int64 = -2
+    private let INVALID_VALUE: Int64 = -1
     private let INT64_MAX_DIGIT = (Int) (floor(log10(Double(Int64.max))) + 1)
     
     override func viewDidLoad() {
@@ -40,9 +39,6 @@ class CalculatorController: UIViewController, UITextFieldDelegate {
     
     func getNumberFromText(text: String?) -> Int64 {
         if let safeText = text {
-            if (safeText.count > INT64_MAX_DIGIT) {
-                return INT64_OVERFLOW_RESULT
-            }
             if (safeText.isEmpty) {
                 return EMPTY_RESULT
             }
@@ -57,21 +53,21 @@ class CalculatorController: UIViewController, UITextFieldDelegate {
     }
 
     func calculateGoldToSeed(gold: Int64) -> Int64 {
-        if (gold == INT64_OVERFLOW_RESULT || gold == INVALID_VALUE) {
+        if (gold == INVALID_VALUE || gold == EMPTY_RESULT) {
             return gold
         }
         if (gold >= Int64.max / pivotGoldSeed) {
-            return INT64_OVERFLOW_RESULT
+            return INVALID_VALUE
         }
         return pivotGoldSeed * gold
     }
     
     func calculateSeedToGold(seed: Int64) -> Int64 {
-        if (seed == INT64_OVERFLOW_RESULT || seed == INVALID_VALUE) {
+        if (seed == INVALID_VALUE || seed == EMPTY_RESULT) {
             return seed
         }
         if (seed >= Int64.max) {
-            return INT64_OVERFLOW_RESULT
+            return INVALID_VALUE
         }
         return seed / pivotGoldSeed
     }
@@ -79,10 +75,8 @@ class CalculatorController: UIViewController, UITextFieldDelegate {
     func transformResultToString(resultNumber: Int64) -> String {
         if (resultNumber == EMPTY_RESULT) {
             return ""
-        } else if (resultNumber == INT64_OVERFLOW_RESULT) {
-            return "좀 더 작은 값을 입력 해 주세요."
         } else if (resultNumber == INVALID_VALUE) {
-            return "알맞은 값을 입력 해 주세요."
+            return "말이됨 ?????"
         }
         return String(resultNumber)
     }

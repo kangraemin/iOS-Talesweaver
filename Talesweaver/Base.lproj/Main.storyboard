@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XC7-y7-Y5D">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XC7-y7-Y5D">
                                 <rect key="frame" x="168" y="159" width="78" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="괴산기"/>
                                 <connections>
@@ -28,6 +27,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ig0-nh-F0I"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XC7-y7-Y5D" firstAttribute="top" secondItem="Ig0-nh-F0I" secondAttribute="top" constant="71" id="12E-tl-kaD"/>
+                            <constraint firstItem="XC7-y7-Y5D" firstAttribute="centerX" secondItem="Mbj-Ie-U9a" secondAttribute="centerX" id="qKU-lZ-HrL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HLs-Su-c7X"/>
                     <connections>
@@ -93,7 +96,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="시드를 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RqB-Cd-kQY">
                                 <rect key="frame" x="30" y="255" width="304" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="변환 결과" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C89-9a-9LU">
                                 <rect key="frame" x="175.5" y="329" width="63.5" height="21"/>

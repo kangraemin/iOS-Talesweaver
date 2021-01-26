@@ -23,6 +23,11 @@ class CalculatorController: UIViewController, UITextFieldDelegate {
     private let INVALID_VALUE: Int64 = -1
     private let INT64_MAX_DIGIT = (Int) (floor(log10(Double(Int64.max))) + 1)
     
+    @IBOutlet weak var thoriumLabel: UILabel!
+    @IBOutlet weak var platinumLabel: UILabel!
+    @IBOutlet weak var goldLabel: UILabel!
+    @IBOutlet weak var seedLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         upperTextField.delegate = self
@@ -31,12 +36,31 @@ class CalculatorController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
         if (textField == self.upperTextField) {
-            underTextField.text = transformResultToString(resultNumber: calculateGoldToSeed(gold: getNumberFromText(text: upperTextField.text)))
+            let inputNumber = getNumberFromText(text: upperTextField.text)
+            underTextField.text = transformResultToString(resultNumber: calculateGoldToSeed(gold: inputNumber), isBullionCase: false)
+            setBullionNumber(inputSeed: getNumberFromText(text: underTextField.text))
         } else if (textField == self.underTextField) {
-            upperTextField.text = transformResultToString(resultNumber: calculateSeedToGold(seed: getNumberFromText(text: underTextField.text)))
+            let inputNumber = getNumberFromText(text: underTextField.text)
+            upperTextField.text = transformResultToString(resultNumber: calculateSeedToGold(seed: inputNumber), isBullionCase: false)
+            setBullionNumber(inputSeed: inputNumber)
         }
     }
     
+    func setBullionNumber(inputSeed: Int64) {
+        if (inputSeed == INVALID_VALUE || inputSeed == EMPTY_RESULT) {
+            thoriumLabel.text = transformResultToString(resultNumber: inputSeed, isBullionCase: true)
+            platinumLabel.text = transformResultToString(resultNumber: inputSeed, isBullionCase: true)
+            goldLabel.text = transformResultToString(resultNumber: inputSeed, isBullionCase: true)
+            seedLabel.text = transformResultToString(resultNumber: inputSeed, isBullionCase: true)
+        } else {
+            let bullion = Bullion(inputSeed: inputSeed)
+            thoriumLabel.text = transformResultToString(resultNumber: bullion.thorium, isBullionCase: true)
+            platinumLabel.text = transformResultToString(resultNumber: bullion.platinum, isBullionCase: true)
+            goldLabel.text = transformResultToString(resultNumber: bullion.gold, isBullionCase: true)
+            seedLabel.text = transformResultToString(resultNumber: bullion.remainderSeed, isBullionCase: true)
+        }
+    }
+
     func getNumberFromText(text: String?) -> Int64 {
         if let safeText = text {
             if (safeText.isEmpty) {
@@ -72,12 +96,39 @@ class CalculatorController: UIViewController, UITextFieldDelegate {
         return seed / pivotGoldSeed
     }
     
-    func transformResultToString(resultNumber: Int64) -> String {
+    func transformResultToString(resultNumber: Int64, isBullionCase: Bool) -> String {
         if (resultNumber == EMPTY_RESULT) {
-            return ""
+            if (isBullionCase) {
+                return "0"
+            } else {
+                return ""
+            }
         } else if (resultNumber == INVALID_VALUE) {
             return "말이됨 ?????"
         }
         return String(resultNumber)
+    }
+}
+
+struct Bullion {
+    let pivotGoldSeed: Int64 = 44000000
+    var pivotPlatinumSeed: Int64
+    var pivotThoriumSeed: Int64
+    var thorium: Int64
+    var platinum: Int64
+    var gold: Int64
+    var remainderSeed: Int64
+    
+    init(inputSeed: Int64) {
+        var remainderSeed = inputSeed
+        pivotPlatinumSeed = pivotGoldSeed * 5
+        pivotThoriumSeed = pivotGoldSeed * 10
+        self.thorium = inputSeed / pivotThoriumSeed
+        remainderSeed = remainderSeed - thorium * pivotThoriumSeed
+        self.platinum = remainderSeed / pivotPlatinumSeed
+        remainderSeed = remainderSeed - platinum * pivotPlatinumSeed
+        self.gold = remainderSeed / pivotGoldSeed
+        self.remainderSeed = remainderSeed
+        print(self)
     }
 }

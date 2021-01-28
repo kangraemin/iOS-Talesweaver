@@ -76,6 +76,14 @@ class CalculatorController: UIViewController, UITextFieldDelegate {
         }
     }
 
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     func calculateGoldToSeed(gold: Int64) -> Int64 {
         if (gold == INVALID_VALUE || gold == EMPTY_RESULT) {
             return gold

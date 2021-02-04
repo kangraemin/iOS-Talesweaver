@@ -76,13 +76,35 @@ class CalculatorController: UIViewController, UITextFieldDelegate {
             } else if (i == maxInputNumberDigit) {
                 let startIndex = (i-1)*4 + resNumberFirstDigit
                 let endIndex = inputNumberText.count
-                resultString.append(contentsOf: aryChar[startIndex..<endIndex])
-                resultString.append(moneyUnit[maxInputNumberDigit-i])
+                let tempArray = aryChar[startIndex..<endIndex]
+                var needToRemoveCount = 0
+                for i in 0..<tempArray.count {
+                    if (tempArray[startIndex + i] == "0") {
+                        needToRemoveCount += 1
+                    } else {
+                        break
+                    }
+                }
+                if (needToRemoveCount != endIndex - startIndex) {
+                    resultString.append(contentsOf: tempArray[(startIndex + needToRemoveCount)..<endIndex])
+                    resultString.append(moneyUnit[maxInputNumberDigit-i])
+                }
             } else {
                 let startIndex = resNumberFirstDigit + (i-1)*4
                 let endIndex = resNumberFirstDigit + (i-1)*4 + 4
-                resultString.append(contentsOf: aryChar[startIndex..<endIndex])
-                resultString.append(moneyUnit[maxInputNumberDigit-i])
+                let tempArray = aryChar[startIndex..<endIndex]
+                var needToRemoveCount = 0
+                for i in 0..<tempArray.count {
+                    if (tempArray[startIndex + i] == "0") {
+                        needToRemoveCount += 1
+                    } else {
+                        break
+                    }
+                }
+                if (needToRemoveCount != endIndex - startIndex) {
+                    resultString.append(contentsOf: tempArray[(startIndex + needToRemoveCount)..<endIndex])
+                    resultString.append(moneyUnit[maxInputNumberDigit-i])
+                }
             }
         }
         resultString.append(helperTextType.rawValue)

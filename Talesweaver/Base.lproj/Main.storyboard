@@ -159,7 +159,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WiE-nl-Zun">
-                                <rect key="frame" x="30" y="184" width="0.0" height="0.0"/>
+                                <rect key="frame" x="30" y="174" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
@@ -201,7 +201,7 @@
                             <constraint firstItem="hk1-vt-bqN" firstAttribute="leading" secondItem="hq0-wk-dTv" secondAttribute="leading" constant="30" id="mP4-d8-smT"/>
                             <constraint firstItem="Wqs-tt-DTu" firstAttribute="leading" secondItem="hq0-wk-dTv" secondAttribute="leading" constant="30" id="pge-gk-HUe"/>
                             <constraint firstItem="vq2-La-VjT" firstAttribute="top" secondItem="C89-9a-9LU" secondAttribute="bottom" constant="30" id="qfA-iW-4jm"/>
-                            <constraint firstItem="WiE-nl-Zun" firstAttribute="top" secondItem="p2n-0A-rQW" secondAttribute="bottom" constant="20" id="vVG-cc-P6l"/>
+                            <constraint firstItem="WiE-nl-Zun" firstAttribute="top" secondItem="p2n-0A-rQW" secondAttribute="bottom" constant="10" id="vVG-cc-P6l"/>
                             <constraint firstItem="0gR-xH-7lA" firstAttribute="top" secondItem="NY3-0H-kZx" secondAttribute="bottom" constant="30" id="xoa-m6-dbB"/>
                             <constraint firstItem="hq0-wk-dTv" firstAttribute="trailing" secondItem="0gR-xH-7lA" secondAttribute="trailing" constant="50" id="xp9-Ec-ch0"/>
                             <constraint firstItem="g99-5N-EgN" firstAttribute="centerX" secondItem="oh8-DI-QO4" secondAttribute="centerX" id="yAD-Zw-DUt"/>

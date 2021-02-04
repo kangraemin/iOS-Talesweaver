@@ -152,6 +152,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CF-xp-Bxm">
+                                <rect key="frame" x="30" y="299" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WiE-nl-Zun">
+                                <rect key="frame" x="30" y="184" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hq0-wk-dTv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -178,14 +190,18 @@
                             <constraint firstItem="RqB-Cd-kQY" firstAttribute="top" secondItem="g99-5N-EgN" secondAttribute="bottom" constant="30" id="TQP-MX-jCD"/>
                             <constraint firstItem="NY3-0H-kZx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FUD-hc-O7a" secondAttribute="trailing" constant="20" id="Y90-Nq-bEF"/>
                             <constraint firstItem="C89-9a-9LU" firstAttribute="top" secondItem="RqB-Cd-kQY" secondAttribute="bottom" constant="110" id="YYi-P8-5iR"/>
+                            <constraint firstItem="WiE-nl-Zun" firstAttribute="leading" secondItem="hq0-wk-dTv" secondAttribute="leading" constant="30" id="dJc-13-53F"/>
                             <constraint firstItem="C89-9a-9LU" firstAttribute="centerX" secondItem="oh8-DI-QO4" secondAttribute="centerX" id="huE-gR-zg3"/>
                             <constraint firstItem="0gR-xH-7lA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="S93-fq-pU0" secondAttribute="trailing" constant="20" id="i9G-y8-Oi2"/>
                             <constraint firstItem="RqB-Cd-kQY" firstAttribute="leading" secondItem="hq0-wk-dTv" secondAttribute="leading" constant="30" id="iTy-qh-oKI"/>
                             <constraint firstItem="p2n-0A-rQW" firstAttribute="leading" secondItem="hq0-wk-dTv" secondAttribute="leading" constant="30" id="l66-ee-i9l"/>
+                            <constraint firstItem="5CF-xp-Bxm" firstAttribute="top" secondItem="RqB-Cd-kQY" secondAttribute="bottom" constant="10" id="lIw-24-jcp"/>
                             <constraint firstItem="shg-4o-exf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Wqs-tt-DTu" secondAttribute="trailing" constant="20" id="lv7-GI-E84"/>
+                            <constraint firstItem="5CF-xp-Bxm" firstAttribute="leading" secondItem="hq0-wk-dTv" secondAttribute="leading" constant="30" id="m3K-bk-aci"/>
                             <constraint firstItem="hk1-vt-bqN" firstAttribute="leading" secondItem="hq0-wk-dTv" secondAttribute="leading" constant="30" id="mP4-d8-smT"/>
                             <constraint firstItem="Wqs-tt-DTu" firstAttribute="leading" secondItem="hq0-wk-dTv" secondAttribute="leading" constant="30" id="pge-gk-HUe"/>
                             <constraint firstItem="vq2-La-VjT" firstAttribute="top" secondItem="C89-9a-9LU" secondAttribute="bottom" constant="30" id="qfA-iW-4jm"/>
+                            <constraint firstItem="WiE-nl-Zun" firstAttribute="top" secondItem="p2n-0A-rQW" secondAttribute="bottom" constant="20" id="vVG-cc-P6l"/>
                             <constraint firstItem="0gR-xH-7lA" firstAttribute="top" secondItem="NY3-0H-kZx" secondAttribute="bottom" constant="30" id="xoa-m6-dbB"/>
                             <constraint firstItem="hq0-wk-dTv" firstAttribute="trailing" secondItem="0gR-xH-7lA" secondAttribute="trailing" constant="50" id="xp9-Ec-ch0"/>
                             <constraint firstItem="g99-5N-EgN" firstAttribute="centerX" secondItem="oh8-DI-QO4" secondAttribute="centerX" id="yAD-Zw-DUt"/>
@@ -195,7 +211,9 @@
                     <navigationItem key="navigationItem" id="6M7-8v-L7k"/>
                     <connections>
                         <outlet property="conversionButton" destination="g99-5N-EgN" id="3Vu-wb-h3Z"/>
+                        <outlet property="goldHelperLabel" destination="WiE-nl-Zun" id="afu-hD-dDa"/>
                         <outlet property="goldLabel" destination="FUD-hc-O7a" id="aYB-hM-jEG"/>
+                        <outlet property="moneyHelperLabel" destination="5CF-xp-Bxm" id="3GO-LP-pI8"/>
                         <outlet property="platinumLabel" destination="Wqs-tt-DTu" id="asG-eF-NTW"/>
                         <outlet property="seedLabel" destination="S93-fq-pU0" id="I49-Hu-nbx"/>
                         <outlet property="thoriumLabel" destination="hk1-vt-bqN" id="HFD-IT-ARV"/>
@@ -215,6 +233,9 @@
         <image name="arrow.up.arrow.down" catalog="system" width="128" height="98"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

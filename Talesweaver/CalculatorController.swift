@@ -16,7 +16,9 @@ class CalculatorController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var underTextField: UITextField!
     @IBOutlet weak var underLabel: UILabel!
     @IBOutlet weak var upperLabelTrailingConstants: NSLayoutConstraint!
-
+    @IBOutlet weak var goldHelperLabel: UILabel!
+    @IBOutlet weak var moneyHelperLabel: UILabel!
+    
     // Constants
     private let pivotGoldSeed: Int64 = 44000000
     private let EMPTY_RESULT: Int64 = 0
@@ -27,6 +29,12 @@ class CalculatorController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var platinumLabel: UILabel!
     @IBOutlet weak var goldLabel: UILabel!
     @IBOutlet weak var seedLabel: UILabel!
+    
+    let moneyUnit = ["", "만", "억", "조", "경", "해", "자"]
+    
+    enum HelperTextType: String {
+        case gold = "괴", seed = "시드"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,11 +47,46 @@ class CalculatorController: UIViewController, UITextFieldDelegate {
             let inputNumber = getNumberFromText(text: upperTextField.text)
             underTextField.text = transformResultToString(resultNumber: calculateGoldToSeed(gold: inputNumber), isBullionCase: false)
             setBullionNumber(inputSeed: getNumberFromText(text: underTextField.text))
+            goldHelperLabel.text = transformToHelperText(inputNumber: inputNumber, helperTextType: .gold)
+            moneyHelperLabel.text = transformToHelperText(inputNumber: getNumberFromText(text: underTextField.text), helperTextType: .seed )
         } else if (textField == self.underTextField) {
             let inputNumber = getNumberFromText(text: underTextField.text)
             upperTextField.text = transformResultToString(resultNumber: calculateSeedToGold(seed: inputNumber), isBullionCase: false)
             setBullionNumber(inputSeed: inputNumber)
+            goldHelperLabel.text = transformToHelperText(inputNumber: getNumberFromText(text: upperTextField.text), helperTextType: .gold)
+            moneyHelperLabel.text = transformToHelperText(inputNumber: inputNumber, helperTextType: .seed)
         }
+    }
+    
+    func transformToHelperText(inputNumber: Int64, helperTextType: HelperTextType) -> String {
+        if (inputNumber == INVALID_VALUE || inputNumber == EMPTY_RESULT) {
+            return ""
+        }
+        let inputNumberText = String(inputNumber)
+        let maxInputNumberDigit = (inputNumberText.count-1) / 4
+        let resNumberFirstDigit = inputNumberText.count - maxInputNumberDigit * 4
+        let aryChar = Array(inputNumberText)
+        var resultString = ""
+        for i in 0...maxInputNumberDigit {
+            if (i == 0) {
+                let startIndex = 0
+                let endIndex = resNumberFirstDigit
+                resultString.append(contentsOf: aryChar[startIndex..<endIndex])
+                resultString.append(moneyUnit[maxInputNumberDigit-i])
+            } else if (i == maxInputNumberDigit) {
+                let startIndex = (i-1)*4 + resNumberFirstDigit
+                let endIndex = inputNumberText.count
+                resultString.append(contentsOf: aryChar[startIndex..<endIndex])
+                resultString.append(moneyUnit[maxInputNumberDigit-i])
+            } else {
+                let startIndex = resNumberFirstDigit + (i-1)*4
+                let endIndex = resNumberFirstDigit + (i-1)*4 + 4
+                resultString.append(contentsOf: aryChar[startIndex..<endIndex])
+                resultString.append(moneyUnit[maxInputNumberDigit-i])
+            }
+        }
+        resultString.append(helperTextType.rawValue)
+        return resultString
     }
     
     func setBullionNumber(inputSeed: Int64) {
@@ -137,6 +180,5 @@ struct Bullion {
         remainderSeed = remainderSeed - platinum * pivotPlatinumSeed
         self.gold = remainderSeed / pivotGoldSeed
         self.remainderSeed = remainderSeed
-        print(self)
     }
 }

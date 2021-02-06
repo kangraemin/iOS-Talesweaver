@@ -201,6 +201,7 @@ struct Bullion {
         self.platinum = remainderSeed / pivotPlatinumSeed
         remainderSeed = remainderSeed - platinum * pivotPlatinumSeed
         self.gold = remainderSeed / pivotGoldSeed
+        remainderSeed = remainderSeed - gold * pivotGoldSeed
         self.remainderSeed = remainderSeed
     }
 }

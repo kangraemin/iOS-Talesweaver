@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2837CF6E25B86246006E0E41 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2837CF6D25B86246006E0E41 /* CalculatorViewController.swift */; };
-		2837CF7225B9C289006E0E41 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2837CF7125B9C289006E0E41 /* MainViewController.swift */; };
 		2837CF7525B9C2A6006E0E41 /* CalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2837CF7425B9C2A6006E0E41 /* CalculatorController.swift */; };
 		28B73AD725B5CB7900D61C6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B73AD625B5CB7900D61C6E /* AppDelegate.swift */; };
 		28B73AD925B5CB7900D61C6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B73AD825B5CB7900D61C6E /* SceneDelegate.swift */; };
@@ -20,7 +19,6 @@
 
 /* Begin PBXFileReference section */
 		2837CF6D25B86246006E0E41 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
-		2837CF7125B9C289006E0E41 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2837CF7425B9C2A6006E0E41 /* CalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorController.swift; sourceTree = "<group>"; };
 		28B73AD325B5CB7900D61C6E /* Talesweaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Talesweaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B73AD625B5CB7900D61C6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +68,6 @@
 				28B73AE125B5CB7A00D61C6E /* LaunchScreen.storyboard */,
 				28B73AE425B5CB7A00D61C6E /* Info.plist */,
 				2837CF6D25B86246006E0E41 /* CalculatorViewController.swift */,
-				2837CF7125B9C289006E0E41 /* MainViewController.swift */,
 				2837CF7425B9C2A6006E0E41 /* CalculatorController.swift */,
 			);
 			path = Talesweaver;
@@ -151,7 +148,6 @@
 				28B73AD725B5CB7900D61C6E /* AppDelegate.swift in Sources */,
 				2837CF6E25B86246006E0E41 /* CalculatorViewController.swift in Sources */,
 				28B73AD925B5CB7900D61C6E /* SceneDelegate.swift in Sources */,
-				2837CF7225B9C289006E0E41 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

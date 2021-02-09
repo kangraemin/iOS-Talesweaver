@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		281C5C4B25D19358009037A5 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 281C5B7E25D18317009037A5 /* WidgetKit.framework */; };
+		281C5C4C25D19358009037A5 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 281C5B8025D18317009037A5 /* SwiftUI.framework */; };
+		281C5C4F25D19358009037A5 /* GoldCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C5C4E25D19358009037A5 /* GoldCalculator.swift */; };
+		281C5C5125D19359009037A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 281C5C5025D19359009037A5 /* Assets.xcassets */; };
+		281C5C5525D19359009037A5 /* GoldCalculatorExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 281C5C4A25D19358009037A5 /* GoldCalculatorExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2837CF6E25B86246006E0E41 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2837CF6D25B86246006E0E41 /* CalculatorViewController.swift */; };
 		2837CF7525B9C2A6006E0E41 /* CalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2837CF7425B9C2A6006E0E41 /* CalculatorController.swift */; };
 		28B73AD725B5CB7900D61C6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B73AD625B5CB7900D61C6E /* AppDelegate.swift */; };
@@ -17,7 +22,37 @@
 		28B73AE325B5CB7A00D61C6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28B73AE125B5CB7A00D61C6E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		281C5C5325D19359009037A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28B73ACB25B5CB7900D61C6E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 281C5C4925D19358009037A5;
+			remoteInfo = GoldCalculatorExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		281C5B8E25D18318009037A5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				281C5C5525D19359009037A5 /* GoldCalculatorExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		281C5B7E25D18317009037A5 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		281C5B8025D18317009037A5 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		281C5C4A25D19358009037A5 /* GoldCalculatorExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GoldCalculatorExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		281C5C4E25D19358009037A5 /* GoldCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldCalculator.swift; sourceTree = "<group>"; };
+		281C5C5025D19359009037A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		281C5C5225D19359009037A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2837CF6D25B86246006E0E41 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		2837CF7425B9C2A6006E0E41 /* CalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorController.swift; sourceTree = "<group>"; };
 		28B73AD325B5CB7900D61C6E /* Talesweaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Talesweaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,6 +66,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		281C5C4725D19358009037A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				281C5C4C25D19358009037A5 /* SwiftUI.framework in Frameworks */,
+				281C5C4B25D19358009037A5 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		28B73AD025B5CB7900D61C6E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,10 +85,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		281C5B7D25D18317009037A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				281C5B7E25D18317009037A5 /* WidgetKit.framework */,
+				281C5B8025D18317009037A5 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		281C5C4D25D19358009037A5 /* GoldCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				281C5C4E25D19358009037A5 /* GoldCalculator.swift */,
+				281C5C5025D19359009037A5 /* Assets.xcassets */,
+				281C5C5225D19359009037A5 /* Info.plist */,
+			);
+			path = GoldCalculator;
+			sourceTree = "<group>";
+		};
 		28B73ACA25B5CB7900D61C6E = {
 			isa = PBXGroup;
 			children = (
 				28B73AD525B5CB7900D61C6E /* Talesweaver */,
+				281C5C4D25D19358009037A5 /* GoldCalculator */,
+				281C5B7D25D18317009037A5 /* Frameworks */,
 				28B73AD425B5CB7900D61C6E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				28B73AD325B5CB7900D61C6E /* Talesweaver.app */,
+				281C5C4A25D19358009037A5 /* GoldCalculatorExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,6 +142,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		281C5C4925D19358009037A5 /* GoldCalculatorExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 281C5C5625D19359009037A5 /* Build configuration list for PBXNativeTarget "GoldCalculatorExtension" */;
+			buildPhases = (
+				281C5C4625D19358009037A5 /* Sources */,
+				281C5C4725D19358009037A5 /* Frameworks */,
+				281C5C4825D19358009037A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoldCalculatorExtension;
+			productName = GoldCalculatorExtension;
+			productReference = 281C5C4A25D19358009037A5 /* GoldCalculatorExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		28B73AD225B5CB7900D61C6E /* Talesweaver */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28B73AE725B5CB7A00D61C6E /* Build configuration list for PBXNativeTarget "Talesweaver" */;
@@ -83,10 +166,12 @@
 				28B73ACF25B5CB7900D61C6E /* Sources */,
 				28B73AD025B5CB7900D61C6E /* Frameworks */,
 				28B73AD125B5CB7900D61C6E /* Resources */,
+				281C5B8E25D18318009037A5 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				281C5C5425D19359009037A5 /* PBXTargetDependency */,
 			);
 			name = Talesweaver;
 			productName = Talesweaver;
@@ -102,6 +187,9 @@
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					281C5C4925D19358009037A5 = {
+						CreatedOnToolsVersion = 12.2;
+					};
 					28B73AD225B5CB7900D61C6E = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -121,11 +209,20 @@
 			projectRoot = "";
 			targets = (
 				28B73AD225B5CB7900D61C6E /* Talesweaver */,
+				281C5C4925D19358009037A5 /* GoldCalculatorExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		281C5C4825D19358009037A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				281C5C5125D19359009037A5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		28B73AD125B5CB7900D61C6E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,6 +236,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		281C5C4625D19358009037A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				281C5C4F25D19358009037A5 /* GoldCalculator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		28B73ACF25B5CB7900D61C6E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -152,6 +257,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		281C5C5425D19359009037A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 281C5C4925D19358009037A5 /* GoldCalculatorExtension */;
+			targetProxy = 281C5C5325D19359009037A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		28B73ADC25B5CB7900D61C6E /* Main.storyboard */ = {
@@ -173,6 +286,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		281C5C5725D19359009037A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7LZK6PGS47;
+				INFOPLIST_FILE = GoldCalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rams.Talesweaver.GoldCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		281C5C5825D19359009037A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7LZK6PGS47;
+				INFOPLIST_FILE = GoldCalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rams.Talesweaver.GoldCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		28B73AE525B5CB7A00D61C6E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -224,13 +381,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -279,12 +437,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -292,11 +451,13 @@
 		28B73AE825B5CB7A00D61C6E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7LZK6PGS47;
 				INFOPLIST_FILE = Talesweaver/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,11 +472,13 @@
 		28B73AE925B5CB7A00D61C6E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7LZK6PGS47;
 				INFOPLIST_FILE = Talesweaver/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,6 +493,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		281C5C5625D19359009037A5 /* Build configuration list for PBXNativeTarget "GoldCalculatorExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				281C5C5725D19359009037A5 /* Debug */,
+				281C5C5825D19359009037A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		28B73ACE25B5CB7900D61C6E /* Build configuration list for PBXProject "Talesweaver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
